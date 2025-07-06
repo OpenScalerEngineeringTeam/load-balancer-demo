@@ -15,7 +15,7 @@ OpenScaler **Load Blanacer Demo** is a simple web application made with Flask to
 
 1. Copy the [cloud-init.config.yaml](cloud-init.config.yaml) file
 2. Create one or more computers with [cloud-init.config.yaml](cloud-init.config.yaml) as boot script (under "advanced options")
-   - (NOTE: if you don't have a new instance, follow the guide [#install-demo-app-locally])
+   - (NOTE: if you don't have a new instance, follow the guide [Install Demo App on Already Existing Computer](#test-application-locally))
 3. Create a new Load Balancer
 4. Add a new backend server to the Load Balancer with the IPs of the computers you created in step 2
    - IMPORTANT: make sure to use port 8080 for your backend
