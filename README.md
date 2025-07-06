@@ -2,7 +2,7 @@
 
 OpenScaler **Load Blanacer Demo** is a simple web application made with Flask to help you try out OpenScaler Load Balancer features.
 
-![Load Balancer Demo](docs/img/load-balancer-demo.png)
+![Load Balancer Demo](attachements/load-balancer-example-preview.png)
 
 **Table of content**
 
