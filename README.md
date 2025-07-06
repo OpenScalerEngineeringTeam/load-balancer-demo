@@ -2,6 +2,8 @@
 
 OpenScaler **Load Blanacer Demo** is a simple web application made with Flask to help you try out OpenScaler Load Balancer features.
 
+![Load Balancer Demo](docs/img/load-balancer-demo.png)
+
 **Table of content**
 
 - [Description](#description)
@@ -9,17 +11,24 @@ OpenScaler **Load Blanacer Demo** is a simple web application made with Flask to
 - [Test Application Locally](#test-application-locally)
 - [Access Application with Load Balancer](#access-application-with-load-balancer)
 
-### Description
-
-[![Architecture of
-microservices](/docs/img/architecture-diagram.png)](/docs/img/architecture-diagram.png)
-
 ## Quickstart
 
 1. Copy the `cloud-init.config.yaml` file
-2. Create a new instance (NOTE: if you don't have a new instance, follow the guide [#install-demo-app-locally])
+2. Create one or more computers with `cloud-init.config.yaml` as boot script (under "advanced options")
+   - (NOTE: if you don't have a new instance, follow the guide [#install-demo-app-locally])
+3. Create a new Load Balancer
+4. Add a new backend server to the Load Balancer with the IPs of the computers you created in step 2
+   - IMPORTANT: make sure to use port 8080 for your backend
+   - Optional: you can configure health check for your backend server
+     - use the `/health` endpoint (and keep everything else default; e.g. status code `200` etc.)
+   - you can test out other options like `sticky sessions` and `load balancing algorithm` as well
+5. Create a new frontend server and select the backend created in step 4 as "default backend"
+   - add bind to port `80` (or any port you want)
+   - TIP: keep the "Real Client IP" option enabled to see your IP address displayed in the demo app
+6. Navigate to "network" tab in your load balancer and forward the port you selected in step 5 (in our case `80`)
+7. Done! simply click on the address shown in the table next to your port and you should see the demo app running
 
-### Access Application with Load Balancer
+Try refreshing the page a few times to see the load balancer in action.
 
 ## Test Application Locally
 
