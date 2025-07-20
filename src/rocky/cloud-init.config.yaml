@@ -1,0 +1,13 @@
+#cloud-config
+package_update: true
+packages:
+  - python3-pip
+  - python3-devel
+
+runcmd:
+  - wget https://github.com/OpenScalerEngineeringTeam/load-balancer-demo/archive/refs/tags/v0.0.2.tar.gz -O /root/load-balancer-demo.tar.gz
+  - tar -xzf /root/load-balancer-demo.tar.gz -C /root/
+  - rm /root/load-balancer-demo.tar.gz
+  - mv /root/load-balancer-demo-0.0.2 /root/load-balancer-demo
+  - pip3 install -r /root/load-balancer-demo/requirements.txt
+  - /root/load-balancer-demo/src/install.sh
