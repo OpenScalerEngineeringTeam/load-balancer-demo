@@ -3,7 +3,7 @@ Description=Flask Server Info
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/python3 /root/load-balancer-demo/load-balancer-demo.py
+ExecStart=/usr/bin/python3 /root/load-balancer-demo/src/load-balancer-demo.py
 WorkingDirectory=/root/load-balancer-demo
 Restart=always
 StandardOutput=journal

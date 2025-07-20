@@ -5,8 +5,9 @@ packages:
   - python3-psutil
 
 runcmd:
-  - wget https://github.com/OpenScalerEngineeringTeam/load-balancer-demo/archive/refs/tags/v0.0.2.tar.gz -O /root/load-balancer-demo.tar.gz
+  - wget https://github.com/OpenScalerEngineeringTeam/load-balancer-demo/archive/refs/tags/v0.0.3.tar.gz -O /root/load-balancer-demo.tar.gz
   - tar -xzf /root/load-balancer-demo.tar.gz -C /root/
   - rm /root/load-balancer-demo.tar.gz
-  - mv /root/load-balancer-demo-0.0.2 /root/load-balancer-demo
+  - mv /root/load-balancer-demo-0.0.3 /root/load-balancer-demo
+  - chmod +x /root/load-balancer-demo/src/install.sh
   - /root/load-balancer-demo/src/install.sh
