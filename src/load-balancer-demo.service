@@ -1,0 +1,13 @@
+[Unit]
+Description=Flask Server Info
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /root/load-balancer-demo/load-balancer-demo.py
+WorkingDirectory=/root/load-balancer-demo
+Restart=always
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
