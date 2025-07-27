@@ -8,6 +8,7 @@ log "success" "PHP installation successful"
 
 # Composer
 export COMPOSER_ALLOW_SUPERUSER=1
+export COMPOSER_HOME=/root/.composer
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 composer --version || log "fatal" "Composer installation failed"
