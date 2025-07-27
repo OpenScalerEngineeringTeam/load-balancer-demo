@@ -20,7 +20,5 @@ runcmd:
 - tar -xzf /root/load-balancer-demo.tar.gz -C /root/
 - rm /root/load-balancer-demo.tar.gz
 - mv /root/load-balancer-demo-0.0.4 /root/load-balancer-demo
-# Install dependencies
-- cd /root/load-balancer-demo/admin_app
-- source scripts/utils.sh
-- source scripts/install-dependencies.sh
+# Install dependenciess
+- cd /root/load-balancer-demo/admin_app && . scripts/utils.sh && . scripts/install-dependencies.sh
