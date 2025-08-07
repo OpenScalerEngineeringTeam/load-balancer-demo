@@ -233,6 +233,12 @@ def render_details(path = ""):
 def health():
     return "OK"
 
+@app.route('/health_slow')
+def health_slow():
+    from time import sleep
+    sleep(2)
+    return "OK"
+
 @app.route('/')
 def root():
     return render_details()
